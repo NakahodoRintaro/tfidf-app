@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <div class="container-fluid d-flex align-items-center">
+      <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+        Tf-idfを出力するアプリ
+      </h1>
+    </div>
+  </header>
+  <div class="col py-3 px-md-5">
+  <h2>tfidfの各単語の出力結果</h2>
+    <table class="table table-bordered border-primary table-hover" style="display: block; overflow-x: scroll; white-space: nowrap;">
+        <thead>
+            <tr><th></th>{%- for i in df_columns %}<th>{{ i|e }}</th>{%- endfor %}</tr>
+        </thead>
+        <tbody>
+            {%- for i in df_values %}
+            <tr><th>{{ df_index[loop.index0]|e }}</th>{% for j in i %}<td>{{ j|e }}</td>{% endfor %}</tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+</div>
+    <!-- Copyright -->
+    <footer class="fixed-bottom">
+      <div class="text-center p-3" style="background-color: rgba(0,0,0,0.1);">© 2021
+          Copyright:
+          <a class="" href="https://nakahodorintaro.github.io/"> <strong>Rintaro Nakahodo</strong></a>
+      </div>
+      <!-- Copyright -->
+{% endblock %}

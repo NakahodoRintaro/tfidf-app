@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <div class="container-fluid d-flex align-items-center">
+      <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+        <svg class="genericons-neue genericons-neue-document" width="16px" height="16px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="genericons-neue.svg#document"></use></svg>
+        Tf-idfを出力するアプリ
+      </h1>
+    </div>
+</header>
+<div class="col py-3 px-md-5">
+<form method="POST" action="/upload/" enctype="multipart/form-data">
+    <label class="form-label" for="customFile"><h4>アップロード</label></h4>
+    <div class="col py-3 px-md-5">
+    <input type="file" class="form-control" id="customFile" name="file">
+    <div class="col py-3">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+<a class="dropdown-item" href="http://127.0.0.1:5000/tfidf/">ここをクリックしてtfidfの確認をする</a>
+</div>
+    <!-- Copyright -->
+    <footer class="fixed-bottom">
+    <div class="text-center p-3" style="background-color: rgba(0,0,0,0.1);">© 2021
+        Copyright:
+        <a class="" href="https://nakahodorintaro.github.io/"> <strong>Rintaro Nakahodo</strong></a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- jQuery、Popper.js、Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}
