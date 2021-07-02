@@ -2,7 +2,7 @@
 tf-idfで文章のベクトルの抽出を行うアプリをflaskで実装しました。
 <br>
 
-## enviroment<br>
+## Enviroment<br>
 python3.8環境<br>
 
 ## How to used
